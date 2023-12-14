@@ -10,10 +10,10 @@ export const RemotionRoot: React.FC = () => {
 		<>
 			<Composition
 				component={Funni}
-				durationInFrames={300}
+				durationInFrames={600}
 				width={1080}
 				height={1080}
-				fps={60}
+				fps={30}
 				id="Funni"
 				defaultProps={{
 					titleText: 'first test vidoe',
