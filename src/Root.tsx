@@ -1,5 +1,5 @@
 import {Composition} from 'remotion';
-import Funni from './Funni';
+import {Funni} from './Funni';
 // import {HelloWorld, myCompSchema} from './HelloWorld';
 import {Logo, myCompSchema2} from './HelloWorld/Logo';
 
@@ -13,9 +13,11 @@ export const RemotionRoot: React.FC = () => {
 				durationInFrames={300}
 				width={1080}
 				height={1080}
-				fps={30}
+				fps={60}
 				id="Funni"
-				defaultProps={{}}
+				defaultProps={{
+					titleText: 'first test vidoe',
+				}}
 			/>
 
 			{/* <Composition
