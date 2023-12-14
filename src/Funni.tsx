@@ -1,4 +1,9 @@
-import {AbsoluteFill, useVideoConfig} from 'remotion';
+import {
+	AbsoluteFill,
+	// useVideoConfig,
+	OffthreadVideo,
+	staticFile,
+} from 'remotion';
 import {z} from 'zod';
 
 export const myCompSchema = z.object({
@@ -8,9 +13,11 @@ export const myCompSchema = z.object({
 export const Funni: React.FC<z.infer<typeof myCompSchema>> = ({
 	titleText: propOne,
 }) => {
-	const {durationInFrames, fps} = useVideoConfig();
+	// const {durationInFrames, fps} = useVideoConfig();
 
 	return (
-		<AbsoluteFill style={{backgroundColor: 'rgba(255,255,255)'}}></AbsoluteFill>
+		<AbsoluteFill style={{backgroundColor: 'rgba(255,255,255)'}}>
+			<OffthreadVideo src={staticFile('/vido/vidTemplate.mp4')} />
+		</AbsoluteFill>
 	);
 };
